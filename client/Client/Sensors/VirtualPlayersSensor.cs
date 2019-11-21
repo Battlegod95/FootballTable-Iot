@@ -7,7 +7,7 @@ using System.Globalization;
 namespace Client.Sensors
 {
     
-    public class VirtualPlayersSensor: PlayersSensorInterface, SensorInterface
+    public class VirtualPlayersSensor: PlayersSensorInterface
     {   
         public static string idPlayer1;
         public static string idPlayer2;

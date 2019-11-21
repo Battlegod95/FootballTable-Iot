@@ -8,13 +8,13 @@ using System.Globalization;
 namespace Client.Sensors
 {
     
-    public class VirtualGoalSensor : GoalSensorInterface, SensorInterface
+    public class VirtualGoalSensor : GoalSensorInterface
     {   
         public static bool goalDone;
         public static int totGoalDX = 0;
         public static int totGoalSX = 0;
         public string vincente;
-        public bool sorte;
+
 
         public string[] TeamArray = { VirtualPlayersSensor.Squadra1, VirtualPlayersSensor.Squadra2};
         public string toJson()
@@ -33,9 +33,13 @@ namespace Client.Sensors
         public bool GetGoalDone()
         {
             var random = new Random();
-            sorte = random.Next(2) == 1;
-            //Console.Out.WriteLine(sorte);
-            return sorte;
+            int r = random.Next(2);
+            if (r == 1)
+                return true;
+            else
+                return false;
+            
+            
         }
 
         public string RandomTeamGoal()

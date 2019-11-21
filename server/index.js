@@ -18,6 +18,7 @@ server.post('/tables/:serial', function(req, res, next) {
     res.send('Data received from table [TODO]');
 
 
+
     // uncomment to see posted data
     console.log(req.body);
 

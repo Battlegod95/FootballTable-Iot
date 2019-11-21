@@ -5,8 +5,9 @@ using System.Text;
 
 namespace Client.Sensors
 {
-    interface GoalSensorInterface
+    interface GoalSensorInterface: SensorInterface
     {
+        string toJson();
         void SetGoalDone(bool goalDone);
         bool GetGoalDone();
         string RandomTeamGoal();

@@ -5,8 +5,9 @@ using System.Text;
 
 namespace Client.Sensors
 {
-    interface PlayersSensorInterface
+    interface PlayersSensorInterface: SensorInterface
     {
+        string toJson();
         string GetRandomPlayer1();
         string GetRandomPlayer2();
         string GetRandomPlayer3();
