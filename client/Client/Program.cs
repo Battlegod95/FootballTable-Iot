@@ -9,15 +9,58 @@ namespace Client
 {
     class Program
     {
+         
+        public static int totGoalSX = 0;
+   
         static void Main(string[] args)
         {
 
             // init sensors
             List<SensorInterface> sensors = new List<SensorInterface>();
-            sensors.Add(new VirtualGoalSensor());
+            
+            sensors.Add(new VirtualPlayersSensor());
+            
+            VirtualGoalSensor goalS = new VirtualGoalSensor();
+            int totGoalDX = 0;
+            int totGoalSX  =  0;
+            int goalMancati = 0;
+            
+            
 
-            while (true)
-            {
+              
+            while((totGoalSX<10) && (totGoalDX<10)){
+
+                
+                  //while ((totGoalSX<10) && (totGoalDX<10))
+                    //{ 
+                    for (int i = 0; i < totGoalSX; i++)
+			        {
+                    sensors.Add(new VirtualGoalSensor());
+                                      
+                    }
+                        if(!(goalS.sorte == true))
+                        {
+                        totGoalSX++;
+                        }
+			    //}
+                /*
+                if(totGoalSX<10)
+                { sensors.Add(new VirtualGoalSensor());
+                    if(goalS.sorte== true)
+                    {
+                        totGoalSX++;
+                    }
+                }
+
+                if(totGoalDX<10)
+                {
+                    sensors.Add(new VirtualGoalSensor());
+                    if(!goalS.sorte== true)
+                    {
+                        totGoalDX++;
+                    }
+                }*/
+                    
                 foreach (SensorInterface sensor in sensors)
                 {
                     HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:8011/tables/AB123");
@@ -33,13 +76,19 @@ namespace Client
 
                     Console.Out.WriteLine(httpResponse.StatusCode);
 
+                    
+                    //Console.Out.WriteLine(goalS.sorte);
+                    Console.Out.WriteLine(totGoalSX);
+
                     httpResponse.Close();
 
-                    System.Threading.Thread.Sleep(1000);
+                    System.Threading.Thread.Sleep(5000);
 
                 }
-
+                
             }
+
+            
 
         }
 

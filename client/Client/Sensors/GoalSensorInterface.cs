@@ -9,5 +9,10 @@ namespace Client.Sensors
     {
         void SetGoalDone(bool goalDone);
         bool GetGoalDone();
+        string RandomTeamGoal();
+        string GetDateTime();
+        //int GoalDX();
+        //int GoalSX();
+       
     }
 }

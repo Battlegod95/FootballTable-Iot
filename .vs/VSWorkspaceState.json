@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\Client",
+    "\\client\\Client\\Sensors",
+    "\\server"
+  ],
+  "SelectedNode": "\\client\\Client\\Sensors\\VirtualGoalSensor.cs",
+  "PreviewInSolutionExplorer": false
+}

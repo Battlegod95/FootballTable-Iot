@@ -49,6 +49,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sensors\GoalSensorInterface.cs" />
+    <Compile Include="Sensors\VirtualPlayersSensor.cs" />
+    <Compile Include="Sensors\PlayersSensorInterface.cs" />
     <Compile Include="Sensors\SensorInterface.cs" />
     <Compile Include="Sensors\VirtualGoalSensor.cs" />
   </ItemGroup>

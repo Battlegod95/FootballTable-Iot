@@ -14,7 +14,9 @@ server.get('/tables/:serial', function(req, res, next) {
 });
 
 server.post('/tables/:serial', function(req, res, next) {
+    
     res.send('Data received from table [TODO]');
+
 
     // uncomment to see posted data
     console.log(req.body);
@@ -25,3 +27,5 @@ server.post('/tables/:serial', function(req, res, next) {
 server.listen(8011, function() {
     console.log('%s listening at %s', server.name, server.url);
 });
+
+
